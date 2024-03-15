@@ -1,12 +1,11 @@
 import React from 'react';
-// import useState from 'react';
+import useState from 'react';
 import { Card, Box, CardContent, Typography } from '@mui/material';
-import BasicSwitch from './Switch';
+import OnlineSwitch from './Switch';
 import '../App.css'
 
 
 const Dashboard = () => {
-    // const [online, setOnline] = useState(false);
 
     const onlineModeCard = (
         <React.Fragment>
@@ -17,7 +16,7 @@ const Dashboard = () => {
             <Typography sx={{ fontSize: 12, mb: 1.5 }} color="text.secondary">
               Is the application connected to the internet?
             </Typography>
-            <BasicSwitch />
+            <OnlineSwitch />
           </CardContent>
         </React.Fragment>
       );

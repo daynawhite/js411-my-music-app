@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Dashboard from './components/Dashboard';
+import LoginPage from './components/LoginPage';
 import NavBar from './components/NavBar';
 
 
@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="App">
       
-      <Dashboard/>
+      <LoginPage/>
 
     </div>
   );

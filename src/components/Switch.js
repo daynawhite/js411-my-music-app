@@ -1,14 +1,22 @@
 import React from 'react';
+import { useState } from 'react';
 import Switch from '@mui/material/Switch';
 
-export default function BasicSwitch() {
-    const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
+function OnlineSwitch() {
+    const [onlineStatus, setOnlineStatus] = useState(false);
+
+    const handleChange = (event) => {
+      setOnlineStatus(event.target.checked)}
+    
     return (
-      <div>
-       
-        <Switch {...label} />
-
-      </div>
+        <Switch
+        checked={onlineStatus}
+        onChange={handleChange}
+        inputProps={{ 'aria-label': 'controlled' }}
+        />
     );
   }
+
+
+  export default OnlineSwitch;
