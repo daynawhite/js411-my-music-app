@@ -3,6 +3,8 @@ import React from 'react';
 import { Card, Box, CardContent, Typography } from '@mui/material';
 import OnlineSwitch from './Switch';
 import '../App.css'
+import VolumeSlider from './VolumeSlider'
+import QualitySelector from './SoundQuality';
 
 
 const Dashboard = () => {
@@ -30,7 +32,7 @@ const Dashboard = () => {
             <Typography sx={{ fontSize: 12, mb: 1.5 }} color="text.secondary">
               Overrides all other sound settings in this application
             </Typography>
-            
+            <VolumeSlider/>
           </CardContent>
         </React.Fragment>
         );
@@ -44,7 +46,7 @@ const Dashboard = () => {
             <Typography sx={{ fontSize: 12, mb: 1.5 }} color="text.secondary">
             Manually control the music quality in event of poor connection
             </Typography>
-            
+            <QualitySelector/>
         </CardContent>
         </React.Fragment>
         );
