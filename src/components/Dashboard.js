@@ -1,5 +1,5 @@
 import React from 'react';
-import useState from 'react';
+// import useState from 'react';
 import { Card, Box, CardContent, Typography } from '@mui/material';
 import OnlineSwitch from './Switch';
 import '../App.css'
@@ -50,7 +50,9 @@ const Dashboard = () => {
         );
     
     return (
-        
+      <div>
+        <h1>Welcome User!</h1>
+
         <div className="card-container" >
 
             <div className="online-mode-card">
@@ -63,7 +65,7 @@ const Dashboard = () => {
 
             <div className="master-volume-card">
             <Box sx={{ width: 200, height: 200 }}>
-                <Card variant="outlined">{masterVolumeCard}</Card>
+                <Card className="card-content" variant="outlined">{masterVolumeCard}</Card>
             </Box>
             </div>
 
@@ -74,6 +76,9 @@ const Dashboard = () => {
             </div>
 
         </div>
+
+        <h2>System Notifications:</h2>
+      </div>
     )
 };
 

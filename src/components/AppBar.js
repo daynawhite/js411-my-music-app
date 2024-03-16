@@ -1,16 +1,12 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
+import { AppBar, Toolbar, IconButton, Typography, Button, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-export default function ButtonAppBar() {
-  return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+const NavBar = ({ children }) => {
+    return (
+      <header>
+        <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
         <Toolbar>
           <IconButton
             size="large"
@@ -27,6 +23,14 @@ export default function ButtonAppBar() {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
-    </Box>
-  );
-}
+      </Box>
+        <nav>
+          <a href="/Dashboard">Dashboard</a>
+        </nav>
+        {children}
+      </header>
+    );
+  };
+
+  export default NavBar;
+

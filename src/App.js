@@ -1,14 +1,17 @@
 import React from 'react';
 import './App.css';
-import LoginPage from './components/LoginPage';
-import NavBar from './components/NavBar';
+import LoginTextFields from './components/LoginPage';
+import NavBar from './components/AppBar';
+// import Dashboard from './components/Dashboard'
 
 
 const App = () => {
   return (
     <div className="App">
+
+      {/* <Dashboard/> */}
       
-      <LoginPage/>
+      <LoginTextFields/>
 
     </div>
   );
@@ -16,9 +19,11 @@ const App = () => {
 
 function WrappedApp() {
   return (
+  
     <NavBar>
       <App />
     </NavBar>
+    
   );
 }
 
