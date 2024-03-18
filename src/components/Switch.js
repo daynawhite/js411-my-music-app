@@ -3,8 +3,8 @@ import { useState } from 'react';
 import Switch from '@mui/material/Switch';
 
 
-function OnlineSwitch() {
-    const [onlineStatus, setOnlineStatus] = useState(false);
+function OnlineSwitch({ onlineStatus, setOnlineStatus }) {
+    // const [onlineStatus, setOnlineStatus] = useState(false);
 
     const handleChange = (event) => {
       setOnlineStatus(event.target.checked)}
@@ -12,7 +12,7 @@ function OnlineSwitch() {
     return (
         <Switch
         checked={onlineStatus}
-        onChange={handleChange}
+        onChange={handleChange} 
         inputProps={{ 'aria-label': 'controlled' }}
         />
     );

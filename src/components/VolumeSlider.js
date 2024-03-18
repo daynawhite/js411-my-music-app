@@ -4,11 +4,11 @@ import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import Stack from '@mui/material/Stack';
 
-const VolumeSlider = () => {
-  const [value, setValue] = useState(20);
+const VolumeSlider = ({ volume, setVolume }) => {
+//   const [volume, setVolume] = useState(20);
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setVolume(newValue);
   };
 
   return (
@@ -16,7 +16,7 @@ const VolumeSlider = () => {
       <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
         <Slider 
         aria-label="Volume" 
-        value={value} 
+        value={volume} 
         onChange={handleChange}
         shiftStep={10}
         min={0}

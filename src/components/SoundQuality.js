@@ -2,15 +2,23 @@ import React from 'react';
 import { Box, FormControl, NativeSelect } from '@mui/material';
 import { useState } from 'react';
 
-const QualitySelector = () => {
-    
-    const [quality, setQuality] = useState(2)
+const QualitySelector = ({ quality, setQuality }) => {
+
+    // const [quality, setQuality] = useState(2)
+
+    const handleChange = (event) => {
+        const {
+          target: { value },
+        } = event;
+        setQuality(value);
+      };
 
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
         <NativeSelect
-          defaultValue={2}
+          onChange={handleChange}
+          defaultValue={quality}
           inputProps={{
             id: 'uncontrolled-native',
           }}
